@@ -16,8 +16,8 @@ const gcd = (a, b) => {
 };
 
 const gcdGame = () => {
-  const firstNumber = getRandomInt(100);
-  const secondNumber = getRandomInt(100);
+  const firstNumber = getRandomInt(0, 100);
+  const secondNumber = getRandomInt(0, 100);
   const question = `${firstNumber} ${secondNumber}`;
   const correctAnswer = gcd(firstNumber, secondNumber).toString();
   return [question, correctAnswer];

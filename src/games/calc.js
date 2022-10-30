@@ -20,9 +20,9 @@ const rule = 'What is the result of the expression?';
 
 const calcGame = () => {
   const operators = ['+', '-', '*'];
-  const firstNumber = getRandomInt(100);
-  const secondNumber = getRandomInt(100);
-  const randomOperatorIndex = getRandomInt(operators.length - 1);
+  const firstNumber = getRandomInt(0, 100);
+  const secondNumber = getRandomInt(0, 100);
+  const randomOperatorIndex = getRandomInt(0, operators.length - 1);
   const operator = operators[randomOperatorIndex];
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   const correctAnswer = calculate(firstNumber, secondNumber, operator).toString();
