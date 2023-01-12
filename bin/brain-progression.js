@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import fifthGame from '../src/games/progression.js';
+// eslint-disable-next-line import/extensions
+import gameProgression from '../src/games/progression.js';
 
-console.log(fifthGame());
+gameProgression();

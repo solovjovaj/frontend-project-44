@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import sixthGame from '../src/games/prime.js';
+// eslint-disable-next-line import/extensions
+import gamePrime from '../src/games/prime.js';
 
-console.log(sixthGame());
+gamePrime();

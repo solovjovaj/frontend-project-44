@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import fourthGame from '../src/games/gcd.js';
+// eslint-disable-next-line import/extensions
+import gameGcd from '../src/games/gcd.js';
 
-console.log(fourthGame());
+gameGcd();
