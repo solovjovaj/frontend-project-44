@@ -1,10 +1,10 @@
+// eslint-disable-next-line import/extensions
 import getRandomInt from '../getRandomNumber.js';
+// eslint-disable-next-line import/extensions
 import gameLogic from '../index.js';
 
-const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
 const isPrime = (num) => {
-  for (let i = 2; i < num; i += 1) {
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
     if (num % i === 0) {
       return false;
     }
@@ -12,14 +12,11 @@ const isPrime = (num) => {
   return true;
 };
 
-const primeGame = () => {
+const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gamePrime = () => {
   const randomNum = getRandomInt(2, 100);
   const question = `${randomNum}`;
   const correctAnswer = isPrime(randomNum) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
-
-const sixthGame = () => {
-  gameLogic(rule, primeGame);
-};
-export default sixthGame;
+export default () => gameLogic(rule, gamePrime);

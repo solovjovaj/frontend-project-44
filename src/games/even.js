@@ -1,31 +1,13 @@
-import readlineSync from 'readline-sync';
+import getRandomInt from '../getRandomNumber.js';
+import gameLogic from '../index.js';
 
-export const firstGame = () => {
-  // eslint-disable-next-line no-param-reassign
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  return userName;
+const isEven = (num) => num % 2 === 0;
+const rule = 'Answer "yes" if the number is even, other answer "no"';
+const gameEven = () => {
+  const randomNum = getRandomInt(1, 100);
+  const question = `${randomNum}`;
+  const correctAnswer = isEven(randomNum) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
-export const secondGame = (userName) => {
-  const expectedEvenAnswer = 'yes';
-  const expectedOddAnswer = 'no';
-  for (let i = 0; i < 3; i += 1) {
-    const randomNumber = getRandomInt(100);
-    const randomQuestion = `Question: ${randomNumber}`;
-    console.log(randomQuestion);
-    if (randomNumber % 2 === 0) {
-      if (readlineSync.question('Your answer:') === expectedEvenAnswer) {
-        console.log('Correct!');
-      } else return `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`;
-    } if (randomNumber % 2 !== 0) {
-      if (readlineSync.question('Your answer:') === expectedOddAnswer) {
-        console.log('Correct!');
-      } else return `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`;
-    }
-  } return `Congratulations, ${userName}!`;
-};
+export default () => gameLogic(rule, gameEven);

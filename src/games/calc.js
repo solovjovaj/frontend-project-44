@@ -29,7 +29,7 @@ const calcGame = () => {
   return [question, correctAnswer];
 };
 
-const thirdGame = () => {
+const gameCalc = () => {
   gameLogic(rule, calcGame);
 };
-export default thirdGame;
+export default gameCalc;

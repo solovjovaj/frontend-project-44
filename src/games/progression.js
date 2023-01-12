@@ -1,31 +1,25 @@
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/no-unresolved, import/extensions
 import getRandomInt from '../getRandomNumber.js';
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/no-unresolved, import/extensions
 import gameLogic from '../index.js';
 
-const makeProgression = (startNumber, step, progressionLength) => {
+const generateProgression = (startStep, step, progresLength) => {
   const progression = [];
-  for (let i = 0; i < progressionLength; i += 1) {
-    progression.push(startNumber + (step * i));
+  for (let i = 0; i < progresLength; i += 1) {
+    progression.push(startStep + (step * i));
   }
   return progression;
-}
-
+};
 const rule = 'What number is missing in the progression?';
-
-const progressionGame = () => {
-  const startNumber = getRandomInt(0, 100);
+const gameProgression = () => {
+  const startStep = getRandomInt(1, 10);
   const step = getRandomInt(1, 10);
-  const progressionLength = getRandomInt(5, 10); 
-  const progression = makeProgression(startNumber, step, progressionLength);
-  const hiddenNumberPosition = getRandomInt(0, progressionLength - 1);
-  const correctAnswer = progression[hiddenNumberPosition].toString();
-  progression[hiddenNumberPosition] = '..';
-  const question = progression.join(" ");
+  const progresLength = getRandomInt(5, 10);
+  const progression = generateProgression(startStep, step, progresLength);
+  const missingNumber = getRandomInt(0, progresLength - 1);
+  const correctAnswer = String(progression[missingNumber]);
+  progression[missingNumber] = '..';
+  const question = progression.join(' ');
   return [question, correctAnswer];
 };
-
-const fifthGame = () => {
-  gameLogic(rule, progressionGame);
-};
-export default fifthGame;
+export default () => gameLogic(rule, gameProgression);
