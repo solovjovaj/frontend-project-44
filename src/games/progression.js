@@ -11,7 +11,7 @@ const generateProgression = (startStep, step, progresLength) => {
   return progression;
 };
 const rule = 'What number is missing in the progression?';
-const gameProgression = () => {
+const findMissingNumber = () => {
   const startStep = getRandomInt(1, 10);
   const step = getRandomInt(1, 10);
   const progresLength = getRandomInt(5, 10);
@@ -22,4 +22,4 @@ const gameProgression = () => {
   const question = progression.join(' ');
   return [question, correctAnswer];
 };
-export default () => gameLogic(rule, gameProgression);
+export default () => gameLogic(rule, findMissingNumber);

@@ -13,10 +13,10 @@ const isPrime = (num) => {
 };
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const gamePrime = () => {
+const findPrime = () => {
   const randomNum = getRandomInt(2, 100);
   const question = `${randomNum}`;
   const correctAnswer = isPrime(randomNum) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
-export default () => gameLogic(rule, gamePrime);
+export default () => gameLogic(rule, findPrime);
