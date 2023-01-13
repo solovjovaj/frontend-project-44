@@ -1,6 +1,5 @@
-// eslint-disable-next-line import/no-unresolved, import/extensions
+
 import getRandomInt from '../getRandomNumber.js';
-// eslint-disable-next-line import/no-unresolved, import/extensions
 import gameLogic from '../index.js';
 
 const generateProgression = (startStep, step, progresLength) => {
