@@ -1,6 +1,5 @@
-// eslint-disable-next-line import/no-unresolved
+
 import getRandomInt from '../getRandomNumber.js';
-// eslint-disable-next-line import/no-unresolved
 import gameLogic from '../index.js';
 
 const calc = (firstNumber, secondNumber, operator) => {
@@ -12,14 +11,14 @@ const calc = (firstNumber, secondNumber, operator) => {
     case '*':
       return firstNumber * secondNumber;
     default:
-      return 'Error';
+      return Error;
   }
 };
 
 const rule = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
 
 const calcGame = () => {
-  const operators = ['+', '-', '*'];
   const firstNumber = getRandomInt(0, 100);
   const secondNumber = getRandomInt(0, 100);
   const randomOperatorIndex = getRandomInt(0, operators.length - 1);
