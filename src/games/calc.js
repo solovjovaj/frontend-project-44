@@ -3,7 +3,7 @@ import getRandomInt from '../getRandomNumber.js';
 // eslint-disable-next-line import/no-unresolved
 import gameLogic from '../index.js';
 
-const calculate = (firstNumber, secondNumber, operator) => {
+const calc = (firstNumber, secondNumber, operator) => {
   switch (operator) {
     case '+':
       return firstNumber + secondNumber;
@@ -25,11 +25,11 @@ const calcGame = () => {
   const randomOperatorIndex = getRandomInt(0, operators.length - 1);
   const operator = operators[randomOperatorIndex];
   const question = `${firstNumber} ${operator} ${secondNumber}`;
-  const correctAnswer = calculate(firstNumber, secondNumber, operator).toString();
+  const correctAnswer = calc(firstNumber, secondNumber, operator).toString();
   return [question, correctAnswer];
 };
 
-const gameCalc = () => {
+const calculate = () => {
   gameLogic(rule, calcGame);
 };
-export default gameCalc;
+export default calculate;
