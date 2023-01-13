@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import readlineSync from 'readline-sync';
 
-const gameLogic = (rule, gameFunction) => {
+const gameLogic = (rule, dataGenerationFunction) => {
   // eslint-disable-next-line no-console
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
@@ -10,7 +10,7 @@ const gameLogic = (rule, gameFunction) => {
   // eslint-disable-next-line no-console
   console.log(rule);
   for (let i = 0; i < 3; i += 1) {
-    const [question, correctAnswer] = gameFunction();
+    const [question, correctAnswer] = dataGenerationFunction();
     // eslint-disable-next-line no-console
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
