@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import readlineSync from 'readline-sync';
 
 const gameLogic = (rule, dataGenerationFunction) => {
