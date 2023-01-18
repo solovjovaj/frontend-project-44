@@ -8,7 +8,8 @@ const gameLogic = (rule, dataGenerationFunction) => {
   console.log(`Hello, ${userName}!`);
   // eslint-disable-next-line no-console
   console.log(rule);
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfRounds = 3;
+  for (let i = 0; i < numberOfRounds; i += 1) {
     const [question, correctAnswer] = dataGenerationFunction();
     // eslint-disable-next-line no-console
     console.log(`Question: ${question}`);
