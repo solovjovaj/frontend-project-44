@@ -19,8 +19,8 @@ const rule = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
 const calcGame = () => {
-  const firstNumber = getRandomInt(0, 100);
-  const secondNumber = getRandomInt(0, 100);
+  const firstNumber = getRandomInt();
+  const secondNumber = getRandomInt();
   const randomOperatorIndex = getRandomInt(0, operators.length - 1);
   const operator = operators[randomOperatorIndex];
   const question = `${firstNumber} ${operator} ${secondNumber}`;
