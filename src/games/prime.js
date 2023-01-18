@@ -12,8 +12,10 @@ const isPrime = (num) => {
 };
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const minNumber = 2;
+const maxNumber = 100;
 const findPrime = () => {
-  const randomNum = getRandomInt(2, 100);
+  const randomNum = getRandomInt(minNumber, maxNumber);
   const correctAnswer = isPrime(randomNum) ? 'yes' : 'no';
   return [`${randomNum}`, correctAnswer];
 };
