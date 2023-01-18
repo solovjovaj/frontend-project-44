@@ -10,10 +10,16 @@ const generateProgression = (startStep, step, progresLength) => {
   return progression;
 };
 const rule = 'What number is missing in the progression?';
+const minStartStep = 1;
+const maxStartStep = 10;
+const minStepLength = 1;
+const maxStepLength = 10;
+const minProgressionLength = 5;
+const maxProgressionLength = 10;
 const findMissingNumber = () => {
-  const startStep = getRandomInt(1, 10);
-  const step = getRandomInt(1, 10);
-  const progresLength = getRandomInt(5, 10);
+  const startStep = getRandomInt(minStartStep, maxStartStep);
+  const step = getRandomInt(minStepLength, maxStepLength);
+  const progresLength = getRandomInt(minProgressionLength, maxProgressionLength);
   const progression = generateProgression(startStep, step, progresLength);
   const missingNumber = getRandomInt(0, progresLength - 1);
   const correctAnswer = String(progression[missingNumber]);
