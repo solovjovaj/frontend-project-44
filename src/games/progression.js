@@ -1,6 +1,6 @@
 
 import getRandomInt from '../getRandomNumber.js';
-import gameLogic from '../index.js';
+import makeGameLogic from '../index.js';
 
 const generateProgression = (startStep, step, progresLength) => {
   const progression = [];
@@ -27,4 +27,4 @@ const findMissingNumber = () => {
   const question = progression.join(' ');
   return [question, correctAnswer];
 };
-export default () => gameLogic(rule, findMissingNumber);
+export default () => makeGameLogic(rule, findMissingNumber);

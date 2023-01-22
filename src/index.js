@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const gameLogic = (rule, dataGenerationFunction) => {
+const makeGameLogic = (rule, dataGenerationFunction) => {
   // eslint-disable-next-line no-console
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
@@ -25,4 +25,4 @@ const gameLogic = (rule, dataGenerationFunction) => {
   // eslint-disable-next-line no-console
   console.log(`Congratulations, ${userName}!`);
 };
-export default gameLogic;
+export default makeGameLogic;

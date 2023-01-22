@@ -1,6 +1,6 @@
 
 import getRandomInt from '../getRandomNumber.js';
-import gameLogic from '../index.js';
+import makeGameLogic from '../index.js';
 
 const calc = (firstNumber, secondNumber, operator) => {
   switch (operator) {
@@ -29,6 +29,6 @@ const calcGame = () => {
 };
 
 const calculate = () => {
-  gameLogic(rule, calcGame);
+  makeGameLogic(rule, calcGame);
 };
 export default calculate;

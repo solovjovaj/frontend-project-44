@@ -1,6 +1,6 @@
 
 import getRandomInt from '../getRandomNumber.js';
-import gameLogic from '../index.js';
+import makeGameLogic from '../index.js';
 
 const isPrime = (num) => {
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
@@ -19,4 +19,4 @@ const findPrime = () => {
   const correctAnswer = isPrime(randomNum) ? 'yes' : 'no';
   return [`${randomNum}`, correctAnswer];
 };
-export default () => gameLogic(rule, findPrime);
+export default () => makeGameLogic(rule, findPrime);

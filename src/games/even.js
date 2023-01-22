@@ -1,5 +1,5 @@
 import getRandomInt from '../getRandomNumber.js';
-import gameLogic from '../index.js';
+import makeGameLogic from '../index.js';
 
 const isEven = (num) => num % 2 === 0;
 const rule = 'Answer "yes" if the number is even, other answer "no"';
@@ -11,4 +11,4 @@ const findEven = () => {
   return [`${randomNum}`, correctAnswer];
 };
 
-export default () => gameLogic(rule, findEven);
+export default () => makeGameLogic(rule, findEven);
