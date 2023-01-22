@@ -1,4 +1,3 @@
-
 import getRandomInt from '../getRandomNumber.js';
 import makeGameLogic from '../index.js';
 
